@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@theme {
+  --color-paper: #fafaf8;
+  --color-panel: #f1f3f1;
+  --color-line: #e3e7e4;
+  --color-ink: #16233d;
+  --color-ink-soft: #56606f;
+  --color-ink-faint: #8992a0;
+  --color-emerald: #0e9f6e;
+  --color-emerald-deep: #0a7d56;
+  --color-emerald-glow: #e5f6ef;
+
+  --font-display: 'Manrope', ui-sans-serif, sans-serif;
+  --font-body: 'Inter', ui-sans-serif, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background-color: var(--color-emerald-glow);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-emerald);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
